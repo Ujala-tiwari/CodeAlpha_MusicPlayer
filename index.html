@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SoundWave | Music Player</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+
+<body id="home">
+
+  <!-- ==========================
+       NAVBAR
+  ========================== -->
+
+  <nav class="navbar">
+
+    <a href="#home" class="nav-logo">
+      <i class="fa-solid fa-headphones"></i>
+      <span>SoundWave</span>
+    </a>
+
+    <div class="nav-links" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#player">Player</a>
+      <a href="#playlist-section">Playlist</a>
+      <a href="#about">About</a>
+    </div>
+
+    <div class="nav-actions">
+
+      <a
+        href="#"
+        class="github-btn"
+        id="github-link"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+      </a>
+
+      <button
+        class="menu-btn"
+        id="menu-btn"
+        aria-label="Open navigation menu"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+
+  </nav>
+
+
+  <!-- ==========================
+       HERO / INTRO
+  ========================== -->
+
+  <section class="hero-section">
+
+    <div class="hero-content">
+
+      <p class="hero-badge">
+        <i class="fa-solid fa-wave-square"></i>
+        Your Personal Music Experience
+      </p>
+
+      <h1>
+        Feel Every
+        <span>Beat.</span>
+      </h1>
+
+      <p class="hero-description">
+        Discover, play, and enjoy your favorite tracks with a
+        modern music player built for a smooth listening experience.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#player" class="primary-link">
+          <i class="fa-solid fa-play"></i>
+          Start Listening
+        </a>
+
+        <a href="#playlist-section" class="secondary-link">
+          View Playlist
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-visual">
+      <div class="music-orb">
+        <i class="fa-solid fa-music"></i>
+
+        <span class="wave wave-1"></span>
+        <span class="wave wave-2"></span>
+        <span class="wave wave-3"></span>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ==========================
+       MUSIC APP
+  ========================== -->
+
+  <main class="music-app">
+
+    <header class="app-header">
+      <div>
+        <p class="small-title">NOW PLAYING</p>
+        <h2>SoundWave Player</h2>
+      </div>
+
+      <button class="header-btn" aria-label="Music">
+        <i class="fa-solid fa-music"></i>
+      </button>
+    </header>
+
+
+    <!-- ==========================
+         PLAYER
+    ========================== -->
+
+    <section class="player-card" id="player">
+
+      <div class="cover-container">
+
+        <img
+          src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80"
+          alt="Album cover"
+          id="cover"
+        >
+
+        <div class="playing-badge">
+          <i class="fa-solid fa-wave-square"></i>
+          Playing
+        </div>
+
+      </div>
+
+
+      <div class="song-info">
+        <h2 id="song-title">The Mountain</h2>
+        <p id="artist">Lofi Music</p>
+      </div>
+
+
+      <div class="progress-section">
+
+        <input
+          type="range"
+          id="progress"
+          min="0"
+          max="100"
+          value="0"
+          aria-label="Song progress"
+        >
+
+        <div class="time-container">
+          <span id="current-time">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
+
+      </div>
+
+
+      <div class="controls">
+
+        <button
+          id="shuffle-btn"
+          class="secondary-btn"
+          aria-label="Shuffle"
+        >
+          <i class="fa-solid fa-shuffle"></i>
+        </button>
+
+        <button
+          id="prev-btn"
+          class="control-btn"
+          aria-label="Previous song"
+        >
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+
+        <button
+          id="play-btn"
+          class="play-btn"
+          aria-label="Play song"
+        >
+          <i class="fa-solid fa-play"></i>
+        </button>
+
+        <button
+          id="next-btn"
+          class="control-btn"
+          aria-label="Next song"
+        >
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+
+        <button
+          id="repeat-btn"
+          class="secondary-btn"
+          aria-label="Repeat"
+        >
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+
+      </div>
+
+
+      <div class="volume-container">
+
+        <i class="fa-solid fa-volume-low"></i>
+
+        <input
+          type="range"
+          id="volume"
+          min="0"
+          max="100"
+          value="70"
+          aria-label="Volume"
+        >
+
+        <i class="fa-solid fa-volume-high"></i>
+
+      </div>
+
+      <audio id="audio"></audio>
+
+    </section>
+
+
+    <!-- ==========================
+         PLAYLIST
+    ========================== -->
+
+    <section
+      class="playlist-section"
+      id="playlist-section"
+    >
+
+      <div class="playlist-heading">
+
+        <div>
+          <p class="small-title">YOUR MUSIC</p>
+          <h2>Playlist</h2>
+        </div>
+
+        <span id="song-count">6 Songs</span>
+
+      </div>
+
+      <div
+        class="playlist"
+        id="playlist"
+      >
+      </div>
+
+    </section>
+
+
+    <!-- ==========================
+         ABOUT
+    ========================== -->
+
+    <section class="about-section" id="about">
+
+      <div class="about-icon">
+        <i class="fa-solid fa-headphones-simple"></i>
+      </div>
+
+      <div class="about-content">
+
+        <p class="small-title">ABOUT THE PROJECT</p>
+
+        <h2>More Than Just Play & Pause</h2>
+
+        <p>
+          SoundWave is a responsive JavaScript music player designed
+          with a modern interface and interactive controls. It includes
+          playlist navigation, shuffle, repeat, volume adjustment,
+          progress seeking, autoplay, and responsive design for a
+          seamless listening experience across devices.
+        </p>
+
+        <div class="feature-tags">
+          <span>JavaScript</span>
+          <span>Responsive UI</span>
+          <span>Playlist</span>
+          <span>Autoplay</span>
+          <span>Shuffle</span>
+          <span>Repeat</span>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div>
+      <h3>
+        <i class="fa-solid fa-headphones"></i>
+        SoundWave
+      </h3>
+
+      <p>
+        Built with HTML, CSS & JavaScript.
+      </p>
+    </div>
+
+    <p class="copyright">
+      © 2026 SoundWave. Crafted with passion for music.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
