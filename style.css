@@ -1615,3 +1615,131 @@ body {
     height: 260px;
   }
 }
+/* ==========================
+   FINAL MOBILE POLISH
+========================== */
+
+@media (max-width: 700px) {
+  body {
+    padding: 0;
+  }
+
+  .navbar {
+    width: calc(100% - 20px);
+    margin: 10px auto 0;
+    top: 8px;
+  }
+
+  .hero-section {
+    width: 100%;
+    padding: 65px 16px 45px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .primary-link,
+  .secondary-link {
+    width: 100%;
+  }
+
+  .hero-visual {
+    padding: 25px 0 10px;
+  }
+
+  .music-app {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  .app-header {
+    padding: 0 4px;
+  }
+
+  .app-header h2 {
+    font-size: 25px;
+  }
+
+  .player-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+  }
+
+  .cover-container {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .song-info h2 {
+    font-size: 22px;
+  }
+
+  .controls {
+    gap: 8px;
+  }
+
+  .control-btn,
+  .secondary-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .play-btn {
+    width: 58px;
+    height: 58px;
+  }
+
+  .playlist-section {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .playlist {
+    grid-template-columns: 1fr;
+  }
+
+  .playlist-item {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .playlist-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .playlist-details h3,
+  .playlist-details p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .about-section {
+    width: 100%;
+    padding: 24px 16px;
+  }
+
+  .footer {
+    width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
